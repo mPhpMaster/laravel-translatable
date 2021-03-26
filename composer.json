@@ -40,7 +40,7 @@
             ]
         },
         "include_files": [
-            "src/helpers.php"
+            "src/Translatable/helpers.php"
         ]
     },
     "autoload": {

@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57f85816-0852-4f1b-82b6-e0fc5c24ff89" name="Default Changelist" comment="fix Schema codes to use `foreignId` and `constrained`">
-      <change afterPath="$PROJECT_DIR$/src/Translatable/LocaleHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/LocalizedRoutesServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/LocalizedUrlGenerator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/Macros/IsLocalizedMacro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/Macros/LocalizedHasMacro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/Macros/LocalizedRoutesMacro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/Macros/LocalizedUrlMacro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/Macros/UriTranslationMacro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/Middleware/SetLocale.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/ProvidesRouteParameters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/UrlBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/UrlGenerator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Translatable/helpers.php" afterDir="false" />
+    <list default="true" id="57f85816-0852-4f1b-82b6-e0fc5c24ff89" name="Default Changelist" comment="add routes localizer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/laravel-translatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/laravel-translatable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,9 +86,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="fix Schema codes to use `foreignId` and `constrained`" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Schema codes to use `foreignId` and `constrained`" />
+    <MESSAGE value="add routes localizer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add routes localizer" />
   </component>
 </project>
