@@ -2,6 +2,11 @@
 
 namespace mPhpMaster\Translatable;
 
+/**
+ * Class UrlBuilder
+ *
+ * @package mPhpMaster\Translatable
+ */
 class UrlBuilder
 {
     /**
