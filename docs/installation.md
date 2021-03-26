@@ -42,7 +42,7 @@ In this example, we want to translate the model `Book`. We will need an extra ta
 {% code title="create\_books\_table.php" %}
 ```php
 Schema::create('books', function(Blueprint $table) {
-    $table->increments('id');
+    $table->id();
     $table->string('author');
     $table->timestamps();
 });
@@ -52,14 +52,13 @@ Schema::create('books', function(Blueprint $table) {
 {% code title="create\_book\_translations\_table" %}
 ```php
 Schema::create('book_translations', function(Blueprint $table) {
-    $table->increments('id');
-    $table->integer('book_id')->unsigned();
+    $table->id();
+    $table->foreignId('book_id')->constrained();
     $table->string('locale')->index();
     $table->string('title');
     $table->text('content');
 
     $table->unique(['book_id', 'locale']);
-    $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
 });
 ```
 {% endcode %}

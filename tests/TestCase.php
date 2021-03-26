@@ -36,20 +36,19 @@ abstract class TestCase extends OrchestraTestCase
     protected function createTables(): void
     {
         Schema::create('countries', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('code');
             $table->timestamps();
             $table->softDeletes();
         });
 
         Schema::create('country_translations', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('country_id')->unsigned();
+            $table->id();
+            $table->foreignId('country_id')->constrained();
             $table->string('name');
             $table->string('locale')->index();
 
             $table->unique(['country_id', 'locale']);
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
         });
 
         Schema::create('vegetables', function (Blueprint $table) {
@@ -59,28 +58,26 @@ abstract class TestCase extends OrchestraTestCase
         });
 
         Schema::create('vegetable_translations', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('vegetable_identity')->unsigned();
+            $table->id();
+            $table->foreignId('vegetable_identity')->constrained();
             $table->string('name')->nullable();
             $table->string('locale')->index();
 
             $table->unique(['vegetable_identity', 'locale']);
-            $table->foreign('vegetable_identity')->references('identity')->on('vegetables');
         });
 
         Schema::create('people', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->timestamps();
         });
 
         Schema::create('person_translations', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('person_id')->unsigned();
+            $table->id();
+            $table->foreignId('person_id')->constrained();
             $table->string('name');
             $table->string('locale')->index();
 
             $table->unique(['person_id', 'locale']);
-            $table->foreign('person_id')->references('id')->on('persons')->onDelete('cascade');
         });
     }
 }

@@ -78,7 +78,7 @@ For new tables, a quick solution is to set the storage engine in the migration:
 ```php
 Schema::create('language_translations', function(Blueprint $table){
   $table->engine = 'InnoDB';
-  $table->increments('id');
+  $table->id();
     // ...
 });
 ```

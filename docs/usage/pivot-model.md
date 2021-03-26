@@ -22,13 +22,11 @@ class RoleUser extends Pivot implements TranslatableContract
 {% code title="create\_role\_user\_table.php" %}
 ```php
 Schema::create('role_user', function(Blueprint $table) {
-    $table->increments('id');
-    $table->integer('user_id')->unsigned();
-    $table->integer('role_id')->unsigned();
+    $table->id();
+    $table->foreignId('user_id')->constrained();
+    $table->foreignId('role_id')->constrained();
     
     $table->unique(['user_id', 'role_id']);
-    $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-    $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
 });
 ```
 {% endcode %}
