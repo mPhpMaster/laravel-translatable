@@ -1,6 +1,6 @@
 {
     "name": "mphpmaster/laravel-translatable",
-    "description": "A Laravel package for multilingual models",
+    "description": "A Laravel package for multilingual models. Set up, manage and use localized routes easily!",
     "keywords": [
         "laravel",
         "translation",
@@ -22,7 +22,8 @@
         "php": ">=7.2",
         "illuminate/contracts": "5.8.* || ^6.0 || ^7.0 || ^8.0",
         "illuminate/database": "5.8.* || ^6.0 || ^7.0 || ^8.0",
-        "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0"
+        "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0",
+        "codezero/laravel-localizer": "^1.1"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.* || ^4.0 || ^5.0 || ^6.0",
@@ -34,9 +35,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mPhpMaster\\Translatable\\TranslatableServiceProvider"
+                "mPhpMaster\\Translatable\\TranslatableServiceProvider",
+                "mPhpMaster\\Translatable\\LocalizedRoutesServiceProvider"
             ]
-        }
+        },
+        "include_files": [
+            "src/helpers.php"
+        ]
     },
     "autoload": {
         "psr-4": {
